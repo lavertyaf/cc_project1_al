@@ -1,0 +1,26 @@
+require_relative('../models/artist')
+require_relative('../models/album')
+
+artist1 = Artist.new({"name" => " "})
+artist2 = Artist.new({"name" => " "})
+artist3 = Artist.new({"name" => " "})
+artist4 = Artist.new({"name" => " "})
+artist5 = Artist.new({"name" => " "})
+artist6 = Artist.new({"name" => " "})
+artist7 = Artist.new({"name" => " "})
+artist8 = Artist.new({"name" => " "})
+artist9 = Artist.new({"name" => " "})
+artist10 = Artist.new({"name" => " "})
+
+artist1.save()
+artist2.save()
+artist3.save()
+artist4.save()
+artist5.save()
+artist6.save()
+artist7.save()
+artist8.save()
+artist9.save()
+artist10.save()
+
+album1 = Album
