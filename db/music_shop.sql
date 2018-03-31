@@ -16,5 +16,6 @@ CREATE TABLE albums (
   stock_level INT4,
   buy_price INT4,
   sell_price INT4,
+  release INT4,
   artist INT4 REFERENCES artists(id),
 );
