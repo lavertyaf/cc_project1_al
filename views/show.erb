@@ -1,6 +1,17 @@
-<h1>Check Inventory</h1>
+<h1>Album Info</h1>
 
-<p>Artist: <%= @artist.name %></p>
-<p>Album: <%= @album.title %></p>
-<p>Stock: <%= @album.stock_level%></p>
-<p>Value of Stock: <% @album.total_value%></p>
+
+<img src="/images/<= album.id%>" alt="album cover">
+
+<p>Title: <%= @albums.title %> </p>
+<p>Artist: <%= @albums.artist%> </p>
+<p>Stock Level: <%= @albums.stock_level%></p>
+<p>Year of release: <%= @albums.release%></p>
+
+
+
+<p>Stock level l/m/h</p>
+
+<p>Current buy price: <%=@albums.buy_price%></p>
+<p>Current sell price: <%=@albums.sell_price%></p>
+<p>Profit per sale: <%=@albums.profit%></p>

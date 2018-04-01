@@ -59,7 +59,10 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
   end
 
   def total_value
-    return @stock_level * @buy_price 
+   @stock_level * @buy_price
+  end
 
+  def profit
+    @sell_price - @buy_price
   end
 end

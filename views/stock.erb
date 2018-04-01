@@ -1,0 +1,14 @@
+<h1>Check Inventory</h1>
+
+<ul>
+
+<% @albums.each do |album| %>
+  <li>
+    <a href="/music_shop/<%= album.id %>"> <img src="/images/<= album.id%>" alt="album cover">   <%= album.title %>   <%= album.artist%>   <%= album.stock_level%>></a></li>
+<% end %>
+
+
+</ul>
+
+<p>Total Stock:  placeholder></p>
+<p>Value of Stock:  placeholder></p>

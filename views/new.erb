@@ -1,0 +1,18 @@
+<h1>Order Album</h1>
+
+<form method="post" action="/music_shop/inventory">
+
+  <label for="album-select">Select an album:</label>
+  <select id="album-select" name="album">
+
+    <% @albums.each do |album| %>
+    <option value=<%= album.id %>></option>
+    <% end %>
+
+  </select>
+
+  <label for="quantity">Quantity:</label>
+  <input id="quantity" type="number" name="quantity"/>
+
+  <input type="submit" value="Place Order"/>
+</form>
