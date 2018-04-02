@@ -43,6 +43,14 @@ attr_reader :id, :name
     SqlRunner.run( sql, values )
   end
 
+  def albums
+    sql = "SELECT * FROM albums
+           WHERE artist = $1"
+    values = [@id]
+    albums = SqlRunner.run( sql, values )
+    result = albums.map { |album| Album.new( album ) }
+  end
+
   def update()
     sql = "UPDATE artists
     SET

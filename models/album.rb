@@ -46,8 +46,8 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
       values = []
       artists = SqlRunner.run( sql, values )
       result =  artists.map { |artist| Artist.new( artist )}
-      artists_names = result.map { |artist| artist.name}
-    return artists_names
+      # artists_names = result.map { |artist| artist.name}
+      return result
   end
 
   def delete()
@@ -65,6 +65,17 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
       WHERE id = $8"
     values = [@title, @genre, @stock_level, @buy_price, @sell_price, @release, @artist, @id]
     SqlRunner.run( sql, values )
+  end
+
+  def self.update_stock(album, quantity)
+    sql = "UPDATE albums
+    SET
+    stock_level = stock_level + $1
+    WHERE id = $2"
+    values = [quantity, album]
+    SqlRunner.run( sql, values )
+    # udpatae albums set quantity to quantity where
+    # the album is == album
   end
 
   def self.total_value

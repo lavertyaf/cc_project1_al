@@ -1,12 +1,15 @@
 <h1>Order Album</h1>
 
-<form method="post" action="/inventory">
+<form method="post" action="/order">
+
+  <label for="artist-select">Artist:</label>
+  <input id="artist-select" type="text" name="artist" value="<%= @artist.name %>"/>
 
   <label for="album-select">Select an album:</label>
   <select id="album-select" name="album">
 
-    <% @albums.each do |album| %>
-    <option value=<%= album.id %>></option>
+    <% @artist.albums.each do |album| %>
+      <option value=<%= album.id %>><%= album.title %></option>
     <% end %>
 
   </select>

@@ -16,7 +16,8 @@ get '/inventory' do
 end
 
 get '/albums/new' do
-  @albums = Album.all
+  # @albums = album.find(params['id'])
+  @artist = Artist.find(params['artist_id'].to_i)
   erb(:new)
 end
 
@@ -49,8 +50,9 @@ get '/order' do
 end
 
 post '/order' do
-
-  redirect to "/albums/inventory"
+  puts params
+  Album.update_stock(params["album"].to_i, params["quantity"].to_i)
+  erb(:increase_stock)
 end
 
 post '/albums/:id/delete' do
