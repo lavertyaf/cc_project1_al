@@ -43,7 +43,15 @@ get '/albums/:id/order' do
   erb(:edit)
 end
 
+get '/order' do
+  @artists = Album.artist
+  erb(:order)
+end
 
+post '/order' do
+
+  redirect to "/albums/inventory"
+end
 
 post '/albums/:id/delete' do
   album = Album.find(params['id'])

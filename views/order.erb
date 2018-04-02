@@ -1,0 +1,12 @@
+<h1>Choose Artist</h1>
+
+<ul>
+<% for artist in @artists %>
+  <li>
+
+    <a href="/albums/new">
+     <%= artist %></a>
+   </li>
+<% end %>
+
+</ul>

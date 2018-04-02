@@ -41,8 +41,13 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     return result
   end
 
-  def artist
-    return "Artist name"
+  def self.artist
+      sql = "SELECT * FROM artists"
+      values = []
+      artists = SqlRunner.run( sql, values )
+      result =  artists.map { |artist| Artist.new( artist )}
+      artists_names = result.map { |artist| artist.name}
+    return artists_names
   end
 
   def delete()
@@ -79,4 +84,5 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
   def profit
     @sell_price - @buy_price
   end
+
 end
