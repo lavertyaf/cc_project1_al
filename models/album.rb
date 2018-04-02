@@ -38,7 +38,11 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     values = [id]
     album = SqlRunner.run( sql, values )
     result = Album.new ( album.first )
-  return result
+    return result
+  end
+
+  def artist
+    return "Artist name"
   end
 
   def delete()
@@ -58,8 +62,11 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     SqlRunner.run( sql, values )
   end
 
-  def total_value
-   @stock_level * @buy_price
+  def self.total_value
+    sql = "SELECT SUM(buy_price * stock_level) AS total_value FROM albums"
+    values = []
+    result = SqlRunner.run( sql, values )
+    return result.first["total_value"]
   end
 
   def profit
