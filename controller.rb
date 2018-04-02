@@ -38,21 +38,21 @@ post '/albums/:id' do
   redirect to "/albums/#{params['id']}"
 end
 
-get '/albums/:id/order' do
+get '/albums/:id/reorder' do
   @albums = Album.all
   @artist = Artist.find(params['id'])
   erb(:edit)
 end
 
-get '/order' do
+get '/reorder' do
   @artists = Album.artist
-  erb(:order)
+  erb(:reorder)
 end
 
-post '/order' do
+post '/reorder' do
   puts params
   Album.update_stock(params["album"].to_i, params["quantity"].to_i)
-  erb(:increase_stock)
+  erb(:increased_stock)
 end
 
 post '/albums/:id/delete' do
