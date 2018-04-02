@@ -14,5 +14,5 @@ CREATE TABLE albums (
   buy_price INT4,
   sell_price INT4,
   release INT4,
-  artist INT4 REFERENCES artists(id)
+  artist_id INT4 REFERENCES artists(id)
 );

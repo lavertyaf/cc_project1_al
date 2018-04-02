@@ -3,12 +3,12 @@
 <form method="post" action="/reorder">
 
   <label for="artist-select">Artist:</label>
-  <input id="artist-select" type="text" name="artist" value="<%= @artist.name %>"/>
+  <input id="artist-select" type="text" name="artist" value="<%= @artists.name %>"/>
 
   <label for="album-select">Select an album:</label>
   <select id="album-select" name="album">
 
-    <% @artist.albums.each do |album| %>
+    <% @artists.albums.each do |album| %>
       <option value=<%= album.id %>><%= album.title %></option>
     <% end %>
 

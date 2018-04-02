@@ -4,13 +4,13 @@
 
 <% @albums.each do |album| %>
   <li>
-    <a href="/albums/<%= album.id %>"> <img src="/images/<= album.id%>" alt="album cover">   <%= album.title %>   <%= album.artist%>   <%= album.stock_level%>></a></li>
+    <a href="/albums/<%= album.id %>"> <img src="/images/<= album.id%>" alt="album cover">   <%= album.title %>   <%= album.artist_name%>   <%= album.stock_level%>></a></li>
 <% end %>
 
 
 </ul>
 
-<p>Total Stock:  <%= @total_stock %></p>
-<p>Value of Stock:  <%= @total_value %></p>
+<p>Total Stock: <%= @total_stock %> copies in stock</p>
+<p>Value of Stock: £<%= @total_value %></p>
 
 <a href="/">Return to home</a>

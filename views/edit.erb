@@ -1,0 +1,15 @@
+<h1>Reorder Album</h1>
+
+<form method="post" action="/albums/new?artist_id=<%= artist.id %>>
+
+  <label for="artist-select">Artist:</label>
+  <input id="artist-select" type="text" name="artist" value="<%= @artist_id %>"/>
+
+  <label for="album-select">Album:</label>
+  <input id="album-select" type="text" name="album" value="<%= @album.title %>"/>
+
+  <label for="quantity">Quantity:</label>
+  <input id="quantity" type="number" name="quantity"/>
+
+  <input type="submit" value="Place Order"/>
+</form>

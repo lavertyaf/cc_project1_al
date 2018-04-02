@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release, :artist
+attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release, :artist_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -12,16 +12,16 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     @buy_price = options['buy_price'].to_i
     @sell_price = options['sell_price'].to_i
     @release = options['release'].to_i
-    @artist = options['artist'].to_i
+    @artist_id = options['artist_id'].to_i
   end
 
   def save
     sql = "INSERT INTO albums
-    (title, genre, stock_level, buy_price, sell_price, release, artist)
+    (title, genre, stock_level, buy_price, sell_price, release, artist_id)
       VALUES
       ($1, $2, $3, $4, $5, $6, $7)
       RETURNING * "
-    values = [@title, @genre, @stock_level, @buy_price, @sell_price, @release, @artist]
+    values = [@title, @genre, @stock_level, @buy_price, @sell_price, @release, @artist_id]
     album_data = SqlRunner.run(sql, values)
     @id = album_data.first()['id'].to_i
   end
@@ -41,13 +41,12 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     return result
   end
 
-  def self.artist
-      sql = "SELECT * FROM artists"
-      values = []
-      artists = SqlRunner.run( sql, values )
-      result =  artists.map { |artist| Artist.new( artist )}
-      # artists_names = result.map { |artist| artist.name}
-      return result
+  def artist_name
+      sql = "SELECT * FROM artists WHERE artists.id = $1"
+      values = [@artist_id]
+      result = SqlRunner.run( sql, values )
+      artist =  Artist.new( result.first )
+      return artist.name
   end
 
   def delete()
@@ -60,10 +59,10 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
   def update()
     sql = "UPDATE albums
     SET
-      (title, genre, stock_level, buy_price, sell_price, release, artist) =
+      (title, genre, stock_level, buy_price, sell_price, release, artist_id) =
       ($1, $2, $3, $4, $5, $6, $7)
       WHERE id = $8"
-    values = [@title, @genre, @stock_level, @buy_price, @sell_price, @release, @artist, @id]
+    values = [@title, @genre, @stock_level, @buy_price, @sell_price, @release, @artist_id, @id]
     SqlRunner.run( sql, values )
   end
 
@@ -74,8 +73,6 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     WHERE id = $2"
     values = [quantity, album]
     SqlRunner.run( sql, values )
-    # udpatae albums set quantity to quantity where
-    # the album is == album
   end
 
   def self.total_value

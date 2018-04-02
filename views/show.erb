@@ -3,15 +3,24 @@
 
 <img src="/images/<= album.id%>" alt="album cover">
 
-<p>Title: <%= @albums.title %> </p>
-<p>Artist: <%= @albums.artist%> </p>
-<p>Stock Level: <%= @albums.stock_level%></p>
-<p>Year of release: <%= @albums.release%></p>
+<p>Title: <%= @album.title %> </p>
+<p>Artist: <%= @album.artist_name %> </p>
+<p>Stock Level: <%= @album.stock_level%> copies in stock</p>
+<p>Year of release: <%= @album.release%></p>
 
 
 
 <p>Stock level l/m/h</p>
 
-<p>Current buy price: <%=@albums.buy_price%></p>
-<p>Current sell price: <%=@albums.sell_price%></p>
-<p>Profit per sale: <%=@albums.profit%></p>
+<p>Current buy price: £<%=@album.buy_price%></p>
+<p>Current sell price: £<%=@album.sell_price%></p>
+<p>Profit per sale: £<%=@album.profit%></p>
+
+<p>To order more copies of this album, enter amount required in the box below</p>
+<div>
+  <form action="/reorder" method="post">
+    <input type="number" name="quantity">
+    <input type="hidden" name="album" value="<%= @album.id %>">
+    <button>Reorder this album</button>
+  </form>
+</div>
