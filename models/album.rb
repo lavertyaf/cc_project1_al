@@ -69,6 +69,13 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     return result.first["total_value"]
   end
 
+  def self.total_stock
+    sql = "SELECT SUM(stock_level) AS total_stock FROM albums"
+    values = []
+    result = SqlRunner.run( sql, values )
+    return result.first["total_stock"]
+  end
+
   def profit
     @sell_price - @buy_price
   end

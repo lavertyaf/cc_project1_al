@@ -11,6 +11,7 @@ end
 get '/inventory' do
   @albums = Album.all
   @total_value = Album.total_value
+  @total_stock = Album.total_stock
   erb(:stock)
 end
 
