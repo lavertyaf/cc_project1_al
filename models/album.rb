@@ -41,6 +41,14 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     return result
   end
 
+  def self.find_and_delete( id )
+    sql = "SELECT * FROM albums WHERE id = $1"
+    values = [@id]
+    albums = SqlRunner.run( sql, values )
+    result = Album.delete
+    return result
+  end
+
   def artist_name
       sql = "SELECT * FROM artists WHERE artists.id = $1"
       values = [@artist_id]
@@ -91,6 +99,16 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
 
   def profit
     @sell_price - @buy_price
+  end
+
+  def stock_level_advice()
+    if @stock_level <= 5
+      return "Warning!! Stock level is low, you should order some stock"
+    elsif @stock_level > 6  && @stock_level < 16
+      return "Stock level is ok, you should keep an eye on this"
+    elsif @stock_level >= 16
+      return "You have loads of stock, don't order any more for a while!"
+    end
   end
 
 end

@@ -1,0 +1,29 @@
+<h1>Update some info below</h1>
+
+<form method="post" action="/albums/<%= @album.id %>">
+
+  <input type="hidden" name="artist_id" value="<%= @album.artist_id %>">
+
+  <label for="artist-select">Artist:</label>
+  <input id="artist-select" type="text" name="artist_name" value=" <%= @album.artist_name%>"/>
+
+  <label for="album-select">Album:</label>
+  <input id="album-select" type="text" name="title" value="<%= @album.title%>"/>
+
+  <label for="genre">Genre:</label>
+  <input id="genre" name="genre" type="text" value="<%= @album.genre%>"/>
+
+  <label for="quantity">Quanity</label>
+  <input id="quantity" type="number" name="stock_level" value="<%= @album.stock_level%>"/>
+
+  <label for="buy_price">Buy price:</label>
+  <input id="buy_price" type="number" name="buy_price" value="<%= @album.buy_price%>"/>
+
+  <label for="sell_price">Sell price:</label>
+  <input id="sell_price" type="number" name="sell_price" value="<%= @album.sell_price%>"/>
+
+  <label for="release">Year of release:</label>
+  <input id="release" type="number" name="release" value="<%= @album.release%>"/>
+
+  <input type="submit" value="Update the album info"/>
+</form>

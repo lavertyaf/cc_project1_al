@@ -10,7 +10,7 @@
 
 
 
-<p>Stock level l/m/h</p>
+<p>Stock level: <%= @album.stock_level_advice%></p>
 
 <p>Current buy price: £<%=@album.buy_price%></p>
 <p>Current sell price: £<%=@album.sell_price%></p>
@@ -25,7 +25,14 @@
   </form>
 </div>
 
-<p>delete album</p>
-<p>edit album</p>
+
+<form action="/albums/<%= @album.id %>/delete" method="post">
+    <input type="submit" value="Delete this album"/>
+</form>
+
+<form action="/albums/<%= @album.id %>/update" method="get">
+  <input type="submit" value="Update album info"/>
+</form>
+
 
 <a href="/">Return to home</a>

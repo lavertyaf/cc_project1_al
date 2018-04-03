@@ -8,7 +8,6 @@ get '/albums' do
   @albums = Album.all
   @total_value = Album.total_value
   @total_stock = Album.total_stock
-  # @artist_name = Album.artist_name
   erb(:"albums/index")
 end
 
@@ -30,12 +29,24 @@ post '/albums' do
 end
 
 post '/albums/:id/delete' do
-  album = Album.find(params['id'])
-  album.delete
+  album = Album.find(params['id'].to_i)
+  album.delete()
+  redirect to ("/albums")
+end
+
+get '/albums/:id/update' do
+  @album = Album.find(params['id'].to_i)
+  erb(:"albums/update")
+end
+
+post '/albums/:id' do
+  album = Album.new(params)
+  album.update
+  redirect to "/albums"
 end
 
 get '/albums/:id' do
-  @album = Album.find(params['id'])
+  @album = Album.find(params['id'].to_i)
   @profit = @album.profit
   erb(:"albums/show")
 end
