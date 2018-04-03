@@ -45,7 +45,7 @@ attr_reader :id, :name
 
   def albums
     sql = "SELECT * FROM albums
-           WHERE artist = $1"
+           WHERE artist_id = $1"
     values = [@id]
     albums = SqlRunner.run( sql, values )
     result = albums.map { |album| Album.new( album ) }

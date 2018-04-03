@@ -1,4 +1,4 @@
-<h1>Album Info</h1>
+<h1>Tell me everything!</h1>
 
 
 <img src="/images/<= album.id%>" alt="album cover">
@@ -20,7 +20,12 @@
 <div>
   <form action="/reorder" method="post">
     <input type="number" name="quantity">
-    <input type="hidden" name="album" value="<%= @album.id %>">
+    <input type="hidden" name="id" value="<%= @album.id %>">
     <button>Reorder this album</button>
   </form>
 </div>
+
+<p>delete album</p>
+<p>edit album</p>
+
+<a href="/">Return to home</a>

@@ -3,9 +3,11 @@
 <ul>
 <% for artist in @artists %>
   <li>
-    <a href="/albums/new?artist_id=<%= artist.id %>">
+    <a href="/albums/reorder?artist_id=<%= artist.id %>">
      <%= artist.name %></a>
    </li>
 <% end %>
 
 </ul>
+
+<a href="/">Return to home</a>

@@ -1,0 +1,39 @@
+<h1>How about something new?</h1>
+
+
+<form method="post" action="/albums">
+
+  <label for="artist-select">Artist:</label>
+  <select id="artist-select" name="artist_id">
+    <% @artists.each do |artist_obj|  %>
+      <option value="<%= artist_obj.id %>" ><%=  artist_obj.name %></option>
+    <% end %>
+  </select>
+  <a href="/artists/new">Add new artist</a>
+
+  <label for="album-select">Album:</label>
+  <input id="album-select" type="text" name="title" value=""/>
+
+ <label for="genre">Genre:</label>
+ <select id="genre" name="genre">
+  <% ["rock", "pop", "rock n roll", "folk", "psychedelic", "other"].each do |genre_str|  %>
+    <option value="<%= genre_str %>" ><%=  genre_str  %></option>
+  <% end %>
+  </select>
+
+  <label for="quantity">Quanity</label>
+  <input id="quantity" type="number" name="stock_level" value=""/>
+
+  <label for="buy_price">Buy price:</label>
+  <input id="buy_price" type="number" name="buy_price" value=""/>
+
+  <label for="sell_price">Sell price:</label>
+  <input id="sell_price" type="number" name="sell_price" value=""/>
+
+  <label for="release">Year of release:</label>
+  <input id="release" type="number" name="release"/>
+
+  <input type="submit" value="Place Order"/>
+</form>
+
+<a href="/">Return to home</a>

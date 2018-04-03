@@ -66,12 +66,12 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     SqlRunner.run( sql, values )
   end
 
-  def self.update_stock(album, quantity)
+  def self.update_stock(id, quantity)
     sql = "UPDATE albums
     SET
     stock_level = stock_level + $1
     WHERE id = $2"
-    values = [quantity, album]
+    values = [quantity, id]
     SqlRunner.run( sql, values )
   end
 
