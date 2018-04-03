@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stockify</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li>
+        <a class="button" href="/albums">What have you got?</a>
+      </li>
+      <li>
+        <a class="button" href="/artists">More of the same?</a>
+      </li>
+      <li>
+        <a class="button" href="/albums/new">Want something different?</a>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <%= yield %>
+  </body>
+</html>
