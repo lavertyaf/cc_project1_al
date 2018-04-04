@@ -4,8 +4,22 @@
   src: url("/fonts/radio_days/RadioDaysNF.ttf");
 }
 
+div{
+  border: 2px solid black;
+}
+
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.action_button {
+  justify-content: center;
+  text-align: center;
+}
+
+.action_button:hover{
+  background-color: lightgrey;
 }
 
 body {
@@ -14,11 +28,13 @@ body {
   font-size: 45px;
 }
 
-.footer {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 40px;
-  justify-content: center;
+.footer, .footer a {
+  font-family: RadioDaysNF;
+  font-size: 50px;
   text-align: center;
+  padding-top: 10px;
+  border: 2px black solid;
+  border-radius: 25px;
 }
 
 .submit {
@@ -45,6 +61,7 @@ nav {
 
  a {
   color: black;
+  justify-content: center;
 }
 
 a:hover {
@@ -52,8 +69,12 @@ a:hover {
 }
 
 .main-image {
-  display: flex;
-  justify-content: center;
+
+height: 1000px;
+width: 1000px;
+padding: 10px 10px;
+
+
 }
 
 nav ul {
@@ -131,9 +152,9 @@ select {
   font-size: 45px;
 }
 
-/*  Media Queries */
+ /* Media Queries
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   nav ul li {
     font-size: 16px;
   }
