@@ -4,9 +4,9 @@
   src: url("/fonts/radio_days/RadioDaysNF.ttf");
 }
 
-div{
+/* div{
   border: 2px solid black;
-}
+} */
 
 
 p {
@@ -16,6 +16,7 @@ p {
 .action_button {
   justify-content: center;
   text-align: center;
+  font-family: RadioDaysNF;
 }
 
 .action_button:hover{
@@ -32,8 +33,7 @@ body {
   font-family: RadioDaysNF;
   font-size: 50px;
   text-align: center;
-  padding-top: 10px;
-  border: 2px black solid;
+  padding-top: 20px;
   border-radius: 25px;
 }
 
@@ -41,6 +41,7 @@ body {
   font-size: 60px;
   padding: 10px;
   background-color:
+
 }
 
 h1 {
@@ -73,10 +74,13 @@ a:hover {
 height: 1000px;
 width: 1000px;
 padding: 10px 10px;
-
-
 }
 
+img {
+  border: black 2px solid;
+  border-radius: 25px
+
+}
 nav ul {
   display: flex;
   flex-direction: column;
@@ -95,7 +99,14 @@ nav ul li {
   list-style-type: none;
   margin: 20px 30px;
   font-size: 55px;
+}
 
+.small_link {
+  font-size: 15px;
+}
+
+ul li {
+  font-size: 55px;
 }
 
 .button {
@@ -124,32 +135,58 @@ nav ul li {
 
 .smll-txt {
   font-size: 40px;
-  width: 400px;
   padding-bottom: 10px;
   justify-content: center;
+  display: inline-block;
+  font-family: RadioDaysNF;
+  border: 2px solid black;
+  width: 500px;
+  background: white;
+  height: 70px;
+  padding: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  width: 900px;
+  height: 70px;
+  font-size: 50px;
+  border-radius: 25px;
+  border: black 2px solid;
   display: inline-block;
 }
 
 input[type="text"] {
-  width: 400px;
-  height: 50px;
-  font-size: 60px;
+  width: 900px;
+  height: 70px;
+  font-size: 50px;
   border-radius: 25px;
   padding: 10px;
   border: black 2px solid;
+  display: inline-block;
 }
 
 input[type="number"] {
-  width: 400px;
-  height: 50px;
-  font-size: 60px;
+  width: 900px;
+  height: 70px;
+  font-size: 50px;
   border-radius: 25px;
-  padding: 10px 10px;
+  padding: 10px;
   border: black 2px solid;
+  display: inline-block;
 }
 
 select {
-  font-size: 45px;
+  width: 900px;
+  height: 70px;
+  font-size: 50px;
+  border-radius: 25px;
+  padding: 10px;
+  border: black 2px solid;
+  display: inline-block;
 }
 
  /* Media Queries
