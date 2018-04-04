@@ -1,42 +1,63 @@
-<h1>How about something new?</h1>
+<h1>Let's order something new!</h1>
 
 
 <form method="post" action="/albums">
+<ul>
 
-  <label for="artist-select">Artist:</label>
+  <li>
+  <label for="artist-select">Artist</label>
   <select id="artist-select" name="artist_id">
     <% @artists.each do |artist_obj|  %>
       <option value="<%= artist_obj.id %>" ><%=  artist_obj.name %></option>
     <% end %>
   </select>
-  <a href="/artists/new">Add new artist</a>
+  <a href="/artists/new">(Add new artist)</a>
+</li>
 
-  <label for="album-select">Album:</label>
+<li>
+  <label for="album-select">Album</label>
   <input id="album-select" type="text" name="title" value=""/>
+</li>
 
- <label for="genre">Genre:</label>
+<li>
+ <label for="genre">Genre</label>
  <select id="genre" name="genre">
-  <% ["rock", "pop", "rock n roll", "folk", "psychedelic", "other"].each do |genre_str|  %>
+  <% ["Rock", "Pop", "Rock n roll", "Folk", "Psychedelic", "Other"].each do |genre_str|  %>
     <option value="<%= genre_str %>" ><%=  genre_str  %></option>
   <% end %>
   </select>
+</li>
 
+<li>
   <label for="quantity">Quanity</label>
   <input id="quantity" type="number" name="stock_level" value=""/>
+</li>
 
-  <label for="buy_price">Buy price:</label>
+<li>
+  <label for="buy_price">Buy price</label>
   <input id="buy_price" type="number" name="buy_price" value=""/>
+</li>
 
-  <label for="sell_price">Sell price:</label>
+<li>
+  <label for="sell_price">Sell price</label>
   <input id="sell_price" type="number" name="sell_price" value=""/>
+</li>
 
-  <label for="release">Year of release:</label>
+<li>
+  <label for="release">Released</label>
   <input id="release" type="number" name="release"/>
+</li>
 
-  <label for="image">Name of image:</label>
+<li>
+  <label for="image">Image name</label>
   <input id="image" type="text" name="image"/>
+  </li>
+</ul>
 
-  <input type="submit" value="Place Order"/>
+<div>
+  <button class="button smll-txt">Order</button>
+</div>
 </form>
-
-<a href="/">Return to home</a>
+<div class="footers">
+  <a href="/">Return to homepage</a>
+</div>

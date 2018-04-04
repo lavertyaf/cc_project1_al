@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Stockify</title>
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
+      <li>
+        <a class="button" href="/">Take me home</a></li>
       <li>
         <a class="button" href="/albums">What have you got?</a>
       </li>
@@ -15,11 +17,16 @@
         <a class="button" href="/artists">More of the same?</a>
       </li>
       <li>
-        <a class="button" href="/albums/new">Want something different?</a>
+        <a class="button" href="/albums/new">Something different?</a>
       </li>
     </ul>
   </nav>
   <body>
-    <%= yield %>
+    <header>
+      <h1>Stockify</h1>
+    </header>
+    <section class="main"> 
+      <%= yield %>
+    </section>
   </body>
 </html>

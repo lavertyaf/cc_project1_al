@@ -5,7 +5,7 @@
   <label for="artist-select">Artist:</label>
   <input id="artist-select" type="text" name="artist" value="<%= @artist.name %>"/>
 
-  <label for="album-select">Select an album:</label>
+  <label for="album-select">Which album?:</label>
   <select id="album-select" name="id">
 
     <% @albums.each do |album| %>
@@ -14,10 +14,14 @@
 
   </select>
 
-  <label for="quantity">Quantity:</label>
+  <label for="quantity">How many?:</label>
   <input id="quantity" type="number" name="quantity"/>
 
-  <input type="submit" value="Place Order"/>
-</form>
+<div>
+  <button class="button smll-txt">Place Order</button>
+</div>
 
-<a href="/">Return to home</a>
+</form>
+<div class="footers">
+  <a href="/">Return to homepage</a>
+</div>

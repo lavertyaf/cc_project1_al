@@ -1,18 +1,21 @@
-<h1>Check Inventory</h1>
+<h1>Inventory</h1>
 
+<div class="inventory">
 <ul>
-
 <% @albums.each do |album| %>
   <li>
-    <a href="/albums/<%= album.id %>"> <img src="/images/<%=album.id%>.jpg" alt="album cover" style="width:100px;height:100px;">  <%= album.artist_name%> : <%= album.title %>  :  <%= album.stock_level%> in stock</a></li>
+
+    <a href="/albums/<%= album.id %>"> <img src="/images/<%=album.id%>.jpg" alt="album cover" style="width:250px;height:250px;">
+    <%= album.artist_name%> <%= album.title %> <%= album.stock_level%> in stock</a></li>
+
 <% end %>
-
-
 </ul>
-
-<p>Total Stock: <%= @total_stock %> copies in stock</p>
-<p>Value of Stock: £<%= @total_value %></p>
+</div>
 
 
+  <p>You have <%= @total_stock %> albums in the building</p>
+  <p>Your total stock is worth £<%= @total_value %></p>
 
-<a href="/">Return to home</a>
+<div class="footer">
+  <a href="/">Return to homepage</a>
+</div>

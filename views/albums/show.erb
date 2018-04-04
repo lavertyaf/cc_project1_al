@@ -1,23 +1,21 @@
-<h1>Tell me everything!</h1>
+<h1>Tell me more</h1>
 
 
 <img src="/images/<%=@album.id%>.jpg" alt="album cover"style="width:250px;height:250px;">
 
+<p> <%= @album.artist_name %></p>
+<p> <%= @album.title %> </p>
+<p> <%= @album.stock_level%> copies in stock</p>
+<p>Released <%= @album.release%></p>
+<p><%= @album.stock_level_advice%></p>
 
-<p>Title: <%= @album.title %> </p>
-<p>Artist: <%= @album.artist_name %> </p>
-<p>Stock Level: <%= @album.stock_level%> copies in stock</p>
-<p>Year of release: <%= @album.release%></p>
+<table>
+  <p>It'll cost £<%=@album.buy_price%> to buy this</p>
+  <p>You can sell this for £<%=@album.sell_price%></p>
+  <p>You'll make £<%=@album.profit%> profit per sale</p>
+</table>
 
-
-
-<p>Stock level: <%= @album.stock_level_advice%></p>
-
-<p>Current buy price: £<%=@album.buy_price%></p>
-<p>Current sell price: £<%=@album.sell_price%></p>
-<p>Profit per sale: £<%=@album.profit%></p>
-
-<p>To order more copies of this album, enter amount required in the box below</p>
+<p>Want more? Just add the amount in the box:</p>
 <div>
   <form action="/reorder" method="post">
     <input type="number" name="quantity">
@@ -25,15 +23,17 @@
     <button>Reorder this album</button>
   </form>
 </div>
-
-
-<form action="/albums/<%= @album.id %>/delete" method="post">
+<div class="submit">
+  <form action="/albums/<%= @album.id %>/delete" method="post">
     <input type="submit" value="Delete this album"/>
-</form>
+  </form>
+</div>
+<div class="submit">
+  <form action="/albums/<%= @album.id %>/update" method="get">
+    <input type="submit" value="Update info"/>
+  </form>
+</div>
 
-<form action="/albums/<%= @album.id %>/update" method="get">
-  <input type="submit" value="Update album info"/>
-</form>
-
-
-<a href="/">Return to home</a>
+<div class="footers">
+  <a href="/">Return to homepage</a>
+</div>

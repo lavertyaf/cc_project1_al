@@ -103,11 +103,11 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
 
   def stock_level_advice()
     if @stock_level <= 5
-      return "Warning!! Stock level is low, you should order some stock"
+      return "Stock level is low, maybe order some stock"
     elsif @stock_level > 6  && @stock_level < 16
-      return "Stock level is ok, you should keep an eye on this"
+      return "Stock level is ok, keep an eye on this"
     elsif @stock_level >= 16
-      return "You have loads of stock, don't order any more for a while!"
+      return "Loads of stock! Don't order this for a while!"
     end
   end
 
