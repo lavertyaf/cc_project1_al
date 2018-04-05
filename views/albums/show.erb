@@ -1,10 +1,9 @@
-<h1>Tell me more</h1>
+<p>Tell me more</p>
 
 <div class="inventory">
-  <div class="album-image">
 
-    <img src="/images/<%=@album.id%>.jpg" alt="album cover"style="width:300px;height:300px;">
-  </div>
+  <img class="album-image" src="/images/<%=@album.id%>.jpg" alt="album cover">
+
   <div class="album-info">
     <ul>
       <li><%= @album.artist_name %></li>
@@ -14,30 +13,49 @@
     </ul>
   </div>
 </div>
+
+<div class="album-changes">
+  <div class="btn-row">
+    <form action="/albums/<%= @album.id %>/update" method="get">
+      <input type="submit" value="Update info"/>
+    </form>
+  </div>
+
+  <div class="btn-row">
+    <form action="/albums/<%= @album.id %>/delete" method="post">
+      <input type="submit" value="Delete this album"/>
+    </form>
+  </div>
+</div>
+
 <p><%= @album.stock_level_advice%></p>
 
-<table>
-  <p>It'll cost £<%=@album.buy_price%> to buy this</p>
-  <p>You can sell this for £<%=@album.sell_price%></p>
-  <p>You'll make £<%=@album.profit%> profit per sale</p>
-</table>
+<div class="content-box">
+  <table class="profit_table">
+    <tr>
+      <td>BUY</td>
+      <td>£<%=@album.buy_price%></td>
+    </tr>
+    <tr>
+      <td>SELL</td>
+      <td>£<%=@album.sell_price%></td>
+    </tr>
+    <tr>
+      <td>PROFIT</td>
+      <td>£<%=@album.profit%></td>
+    </tr>
+  </table>
+</div>
 
 <p>Want more? Just add the amount in the box:</p>
-<div>
+
+
+
+
+<div class="button">
   <form action="/reorder" method="post">
     <input type="number" name="quantity">
     <input type="hidden" name="id" value="<%= @album.id %>">
-    <button class ="button">Reorder this album</button>
-  </form>
-</div>
-<div class="submit">
-  <form action="/albums/<%= @album.id %>/delete" method="post">
-    <input type="submit" value="Delete this album"/>
-  </form>
-
-</div>
-<div class="submit">
-  <form action="/albums/<%= @album.id %>/update" method="get">
-    <input type="submit" value="Update info"/>
+    <input type="submit" value="Reorder this album"/>
   </form>
 </div>

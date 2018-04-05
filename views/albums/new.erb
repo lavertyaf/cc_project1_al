@@ -1,62 +1,62 @@
 <h1>Let's order something new!</h1>
 
+<form class="form" method="post" action="/albums">
+  <ul>
+    <li>
+      <label for="artist-select">Artist</label>
+      <select id="artist-select" name="artist_id">
+        <% @artists.each do |artist_obj|  %>
+        <option value="<%= artist_obj.id %>" ><%=  artist_obj.name %></option>
+        <% end %>
+      </select>
+      <div class="small_link">
+        <a href="/artists/new">(Add new artist)</a>
+      </div>
+    </li>
 
-<form method="post" action="/albums">
-<ul>
+    <li>
+      <label for="album-select">Album</label>
+      <input id="album-select" type="text" name="title" value=""/>
+    </li>
 
-  <li>
-  <label for="artist-select">Artist</label>
-  <select id="artist-select" name="artist_id">
-    <% @artists.each do |artist_obj|  %>
-      <option value="<%= artist_obj.id %>" ><%=  artist_obj.name %></option>
-    <% end %>
-  </select>
-  <div class="small_link">
-    <a href="/artists/new">(Add new artist)</a>
-  </div>
-</li>
+    <li>
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre">
+        <% ["Rock", "Pop", "Rock n roll", "Folk", "Psychedelic", "Other"].each do |genre_str|  %>
+        <option value="<%= genre_str %>" ><%=  genre_str  %></option>
+        <% end %>
+      </select>
+    </li>
 
-<li>
-  <label for="album-select">Album</label>
-  <input id="album-select" type="text" name="title" value=""/>
-</li>
+    <li>
+      <label for="quantity">Quantity</label>
+      <input id="quantity" type="number" name="stock_level" value=""/>
+    </li>
 
-<li>
- <label for="genre">Genre</label>
- <select id="genre" name="genre">
-  <% ["Rock", "Pop", "Rock n roll", "Folk", "Psychedelic", "Other"].each do |genre_str|  %>
-    <option value="<%= genre_str %>" ><%=  genre_str  %></option>
-  <% end %>
-  </select>
-</li>
+    <li>
+      <label for="buy_price">Buy price</label>
+      <input id="buy_price" type="number" name="buy_price" value=""/>
+    </li>
 
-<li>
-  <label for="quantity">Quantity</label>
-  <input id="quantity" type="number" name="stock_level" value=""/>
-</li>
+    <li>
+      <label for="sell_price">Sell price</label>
+      <input id="sell_price" type="number" name="sell_price" value=""/>
+    </li>
 
-<li>
-  <label for="buy_price">Buy price</label>
-  <input id="buy_price" type="number" name="buy_price" value=""/>
-</li>
+    <li>
+      <label for="release">Released</label>
+      <input id="release" type="number" name="release"/>
+    </li>
 
-<li>
-  <label for="sell_price">Sell price</label>
-  <input id="sell_price" type="number" name="sell_price" value=""/>
-</li>
+    <li>
+      <label for="image">Image name</label>
+      <input id="image" type="text" name="image"/>
+    </li>
 
-<li>
-  <label for="release">Released</label>
-  <input id="release" type="number" name="release"/>
-</li>
+    <li class="btn-li">
+      <button class="btn">ORDER</button>
+    </li>
 
-<li>
-  <label for="image">Image name</label>
-  <input id="image" type="text" name="image"/>
-  </li>
-</ul>
+  </ul>
 
-<div class="action_button">
-  <button class="button smll-txt">ORDER</button>
-</div>
 </form>

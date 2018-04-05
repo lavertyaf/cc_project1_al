@@ -1,58 +1,33 @@
-
 @font-face {
   font-family: RadioDaysNF;
   src: url("/fonts/radio_days/RadioDaysNF.ttf");
 }
 
-/* div{
-  border: 2px solid black;
-} */
-
-
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: center;
-}
-
-.action_button {
-  justify-content: center;
-  text-align: center;
-  font-family: RadioDaysNF;
-}
-
-.action_button:hover{
-  background-color: lightgrey;
-}
-
 body {
   background-color: darkorange;
-  font-family: RadioDaysNF;
+  font-family: 'Montserrat', sans-serif;
   font-size: 45px;
 }
 
-.footer, .footer a {
-  font-family: RadioDaysNF;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 20px;
-  border-radius: 25px;
-}
-
-.submit {
-  font-size: 60px;
-  padding: 10px;
-  background-color:
-}
-
-h1, h2 {
-  display: flex;
-  justify-content: center;
+h1, h2, h3, h4, h6 {
   text-align: center;
 }
 
 header {
-  justify-content: center;
-  font-size: 60px;
+  font-family: RadioDaysNF;
+    text-align: center;
+    font-size: 130px;
+}
+
+p {
+  text-align: center;
+  font-size: 70px;
+  margin-left: 30px
+}
+
+li {
+  font-size: 55px;
+  list-style-type: none;
 }
 
 nav {
@@ -60,96 +35,163 @@ nav {
   justify-content: center;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---- classes ----- */
+
+.footer, .footer a {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px 0 20px 0;
+  text-decoration: underline;
+}
+
+img {
+  border: black 2px solid;
+  border-radius: 25px;
+  margin: 20px;
+  width:250px;
+  height:250px;
+}
+
+.main-image{
+  height: 600px;
+  width: 600px;
+}
+
+
 a {
   color: black;
-  justify-content: center;
-  padding-bottom: 0px;
+  text-decoration: none;
 }
 
 a:hover {
   color: white;
 }
 
-.main-image {
+/*--- containers----  */
 
-height: 1000px;
-width: 1000px;
-padding: 10px 10px;
-}
-
-img {
-  border: black 2px solid;
-  border-radius: 25px
-
-}
-nav ul {
+.stock_info {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: black 5px solid;
+  border-radius: 25px;
+  height: 200px;
+  background-color: lightgrey;
+  margin: 0 20px 20px 60px;
+  padding: 40px 15px;
 }
 
-/*  ---- Tell me more - Albums ----- */
+.albums_here, .stock_value {
+  border: black 3px solid;
+  border-radius: 25px;
+  margin: 5px 20px;
+  width: 50%;
+  padding: 10px 10px 10px 20px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 45px;
+  justify-content: space-around;
+  background-color: white;
+}
 
 .inventory {
   display: flex;
-  padding: 10px 0px 0px 60px;
+  padding: 10px 0px 30px 30px;
+  font-size: 50px;
+}
+
+.album-changes {
+  display: flex;
+  padding-left: 50px;
 }
 
 .album-info {
   display: flex;
   align-items: flex-start;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  font-size: 15px;
 }
 
 .album-image {
   display: flex;
   align-items: center;
+  width: 275px;
+  height: 275px;
 }
 
-li {
-  list-style-type: none;
+.profit_table {
+  justify-content: center;
+  width: 700px;
+  font-size: 80px;
+  border: black 5px solid;
+  border-radius: 25px;
+  background-color: white;
+  padding-left: 50px
 }
 
-nav ul li {
-  list-style-type: none;
-  margin: 20px 20px;
-  font-size: 55px;
+.content-box {
+  display: flex;
+  border: 5px;
+  justify-content: center;
 }
 
-.small_link {
-  font-size: 15px;
+select, input, button{
+  width: 900px;
+  height: 100px;
+  font-size: 50px;
+  border-radius: 25px;
+  border: black 2px solid;
+  display: inline-block;
+  background-color: white;
+  padding-left: 20px;
+  margin: 0 30px 0 0px;
 }
 
-ul li {
-  font-size: 55px;
+.btn {
+  width: 60%;
+  margin-top: 40px;
 }
 
+.btn-li {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-row input[type = "submit"] {
+  height: 76px;
+  width: 450px;
+}
+
+label {
+  padding: 50px 0 0 20px;
+  display: block;
+}
+
+select#artist-select, select#genre, select#album-select{
+  height: 106px;
+  width: 925px;
+}
+
+/*  ---- buttons-----*/
 
 .nav-button {
-  border: 2px solid black;
+  border: 3px solid black;
   width: 900px;
   font-size: 55px;
   background: white;
   height: 70px;
-  padding: 30px 10px 10px 10px;
+  padding: 30px 50px 10px 10px;
   border-radius: 25px;
-  flex-wrap: nowrap;
+  margin: 15px 15px;
   text-decoration: none;
-  justify-content: center;
-  display: inline-block;
-  text-align: center;
-}
-.button {
-  border: 2px solid black;
-  width: 900px;
-  font-size: 50px;
-  background: white;
-  height: 70px;
-
-  border-radius: 25px;
-  flex-wrap: nowrap;
-  text-decoration: none;
-  justify-content: center;
   display: inline-block;
   text-align: center;
 }
@@ -163,70 +205,7 @@ ul li {
   transform: translateY(4px);
 }
 
-.smll-txt {
-  font-size: 40px;
-  padding-bottom: 10px;
-  justify-content: center;
-  display: inline-block;
-  font-family: RadioDaysNF;
-  border: 2px solid black;
-  width: 500px;
-  background: white;
-  height: 70px;
-  padding: 10px;
-  border-radius: 25px;
-  text-decoration: none;
-  justify-content: center;
-  text-align: center;
+.small_link {
+  font-size: 15px;
+  margin: 10px;
 }
-
-input {
-  width: 900px;
-  height: 70px;
-  font-size: 50px;
-  border-radius: 25px;
-  border: black 2px solid;
-  display: inline-block;
-}
-
-input[type="text"] {
-  width: 900px;
-  height: 70px;
-  font-size: 50px;
-  border-radius: 25px;
-  padding: 10px;
-  border: black 2px solid;
-  display: inline-block;
-}
-
-input[type="number"] {
-  width: 900px;
-  height: 70px;
-  font-size: 50px;
-  border-radius: 25px;
-  padding: 10px;
-  border: black 2px solid;
-  display: inline-block;
-}
-
-select {
-  width: 900px;
-  height: 70px;
-  font-size: 50px;
-  border-radius: 25px;
-  padding: 10px;
-  border: black 2px solid;
-  display: inline-block;
-}
-
- /* Media Queries
-
-@media screen and (max-width: 600px) {
-  nav ul li {
-    font-size: 16px;
-  }
-
-  .main {
-    font-size: 16px;
-  }
-} */
