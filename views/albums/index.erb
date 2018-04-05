@@ -13,15 +13,16 @@
       <li><%= album.stock_level%> in stock</li></a>
     </ul>
   </div>
+  <br>
 </div>
 <% end %>
 
-<div class="stock_info">
-  <div class="albums_here">
-    You have <%= @total_stock %> albums here
+<div class="stock-info">
+  <div class="info">
+      You have <%= @total_stock %> albums here
   </div>
 
-  <div class="stock_value">
-    Your total stock is worth £<%= @total_value %>
+  <div class="info">
+    Your stock value is £<%= @total_value %>
   </div>
 </div>

@@ -74,17 +74,18 @@ a:hover {
 
 /*--- containers----  */
 
-.stock_info {
+.stock-info {
   display: flex;
   border: black 5px solid;
   border-radius: 25px;
-  height: 200px;
+  height: 150px;
   background-color: lightgrey;
   margin: 0 20px 20px 60px;
   padding: 40px 15px;
 }
 
-.albums_here, .stock_value {
+.info {
+  line-height: 45px;
   border: black 3px solid;
   border-radius: 25px;
   margin: 5px 20px;
@@ -93,7 +94,6 @@ a:hover {
   text-align: center;
   vertical-align: center;
   font-size: 45px;
-  justify-content: space-around;
   background-color: white;
 }
 
@@ -106,6 +106,13 @@ a:hover {
 .album-changes {
   display: flex;
   padding-left: 50px;
+}
+
+.q-and-a form{
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: row;
 }
 
 .album-info {

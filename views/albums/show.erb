@@ -50,12 +50,11 @@
 <p>Want more? Just add the amount in the box:</p>
 
 
+  <div class="q-and-a">
+    <form action="/reorder" method="post">
+      <input type="number" name="quantity">
+      <input type="hidden" name="id" value="<%= @album.id %>">
 
-
-<div class="button">
-  <form action="/reorder" method="post">
-    <input type="number" name="quantity">
-    <input type="hidden" name="id" value="<%= @album.id %>">
-    <input type="submit" value="Reorder this album"/>
-  </form>
-</div>
+      <input type="submit" value="Reorder this album"/>
+    </form>
+  </div>
