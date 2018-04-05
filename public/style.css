@@ -11,6 +11,7 @@
 
 p {
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
 }
 
 .action_button {
@@ -41,10 +42,9 @@ body {
   font-size: 60px;
   padding: 10px;
   background-color:
-
 }
 
-h1 {
+h1, h2 {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -60,7 +60,7 @@ nav {
   justify-content: center;
 }
 
- a {
+a {
   color: black;
   justify-content: center;
 }
@@ -97,7 +97,7 @@ li {
 
 nav ul li {
   list-style-type: none;
-  margin: 20px 30px;
+  margin: 20px 20px;
   font-size: 55px;
 }
 
@@ -112,10 +112,10 @@ ul li {
 .button {
   border: 2px solid black;
   width: 900px;
-
+  font-size: 50px;
   background: white;
   height: 70px;
-  padding: 10px;
+  padding: 30px 10px 10px 10px;
   border-radius: 25px;
   flex-wrap: nowrap;
   text-decoration: none;
