@@ -1,8 +1,8 @@
 <h1>Inventory</h1>
 
-<div class="inventory">
-  <% @albums.each do |album| %>
+<% @albums.each do |album| %>
 
+<div class="inventory">
   <div class="album-image">
     <a href="/albums/<%= album.id %>"> <img src="/images/<%=album.id%>.jpg" alt="album cover" style="width:250px;height:250px;">
   </div>
@@ -13,8 +13,9 @@
       <li><%= album.stock_level%> in stock</li></a>
     </ul>
   </div>
-    <% end %>
 </div>
+<% end %>
+
 
 
 <p>You have <%= @total_stock %> albums in the building</p>

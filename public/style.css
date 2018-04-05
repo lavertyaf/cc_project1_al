@@ -63,6 +63,7 @@ nav {
 a {
   color: black;
   justify-content: center;
+  padding-bottom: 0px;
 }
 
 a:hover {
@@ -87,8 +88,22 @@ nav ul {
   justify-content: center;
 }
 
+/*  ---- Tell me more - Albums ----- */
+
 .inventory {
-    font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  padding: 10px 0px 0px 60px;
+}
+
+.album-info {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 15px;
+}
+
+.album-image {
+  display: flex;
+  align-items: center;
 }
 
 li {
@@ -109,13 +124,28 @@ ul li {
   font-size: 55px;
 }
 
+
+.nav-button {
+  border: 2px solid black;
+  width: 900px;
+  font-size: 55px;
+  background: white;
+  height: 70px;
+  padding: 30px 10px 10px 10px;
+  border-radius: 25px;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+}
 .button {
   border: 2px solid black;
   width: 900px;
   font-size: 50px;
   background: white;
   height: 70px;
-  padding: 30px 10px 10px 10px;
+
   border-radius: 25px;
   flex-wrap: nowrap;
   text-decoration: none;

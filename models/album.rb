@@ -107,7 +107,7 @@ attr_reader :id, :title, :genre, :stock_level, :buy_price, :sell_price, :release
     elsif @stock_level > 6  && @stock_level < 16
       return "Stock level is ok, keep an eye on this"
     elsif @stock_level >= 16
-      return "Loads of stock! Don't order this for a while!"
+      return "You have loads of stock! Maybe put it on special offer?"
     end
   end
 

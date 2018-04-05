@@ -1,12 +1,19 @@
 <h1>Tell me more</h1>
 
+<div class="inventory">
+  <div class="album-image">
 
-<img src="/images/<%=@album.id%>.jpg" alt="album cover"style="width:300px;height:300px;">
-
-<p> <%= @album.artist_name %></p>
-<p> <%= @album.title %> </p>
-<p> <%= @album.stock_level%> copies in stock</p>
-<p>Released <%= @album.release%></p>
+    <img src="/images/<%=@album.id%>.jpg" alt="album cover"style="width:300px;height:300px;">
+  </div>
+  <div class="album-info">
+    <ul>
+      <li><%= @album.artist_name %></li>
+      <li><%= @album.title %> </li>
+      <li><%= @album.stock_level%> in stock</li>
+      <li>Released <%= @album.release%></li>
+    </ul>
+  </div>
+</div>
 <p><%= @album.stock_level_advice%></p>
 
 <table>
