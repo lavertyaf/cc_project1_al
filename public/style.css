@@ -40,8 +40,6 @@ nav {
   justify-content: center;
 }
 
-/* ---- classes ----- */
-
 .footer, .footer a {
   font-size: 50px;
   text-align: center;
@@ -53,15 +51,14 @@ img {
   border: black 2px solid;
   border-radius: 25px;
   margin: 20px;
-  width:250px;
-  height:250px;
+  width:500px;
+  height:500px;
 }
 
 .main-image{
   height: 600px;
   width: 600px;
 }
-
 
 a {
   color: black;
@@ -71,8 +68,6 @@ a {
 a:hover {
   color: white;
 }
-
-/*--- containers----  */
 
 .stock-info {
   display: flex;
@@ -119,14 +114,14 @@ a:hover {
   display: flex;
   align-items: flex-start;
   padding-bottom: 25px;
-  font-size: 15px;
+  font-size: 60px;
 }
 
 .album-image {
   display: flex;
   align-items: center;
-  width: 275px;
-  height: 275px;
+  width: 500px;
+  height: 500px;
 }
 
 .profit_table {
@@ -154,7 +149,7 @@ select, input, button{
   display: inline-block;
   background-color: white;
   padding-left: 20px;
-  margin: 0 30px 0 0px;
+  margin: 10px 30px 0 10px;
 }
 
 .btn {
@@ -178,7 +173,7 @@ select, input, button{
 }
 
 label {
-  padding: 50px 0 0 20px;
+  padding: 25px 0 0 20px;
   display: block;
 }
 
@@ -186,8 +181,6 @@ select#artist-select, select#genre, select#album-select{
   height: 106px;
   width: 925px;
 }
-
-/*  ---- buttons-----*/
 
 .nav-button {
   border: 3px solid black;

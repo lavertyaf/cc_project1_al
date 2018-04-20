@@ -1,18 +1,18 @@
 
-@font-face {
+/* @font-face {
   font-family: RadioDaysNF;
   src: url("/fonts/radio_days/RadioDaysNF.ttf");
-}
+} */
 
 /* div{
   border: 2px solid black;
 } */
 
-
+/*
 p {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-}
+} */
 
 .action_button {
   justify-content: center;
@@ -30,19 +30,19 @@ p {
   background-color: lightgrey;
 }
 
-body {
+/* body {
   background-color: darkorange;
   font-family: RadioDaysNF;
   font-size: 45px;
-}
+} */
 
-.footer, .footer a {
+/* .footer, .footer a {
   font-family: RadioDaysNF;
   font-size: 50px;
   text-align: center;
   padding-top: 20px;
   border-radius: 25px;
-}
+} */
 
 .submit {
   font-size: 60px;
@@ -50,23 +50,23 @@ body {
   background-color:
 }
 
-h1, h2 {
+/* h1, h2 {
   display: flex;
   justify-content: center;
   text-align: center;
-}
+} */
 
-header {
+/* header {
   justify-content: center;
   font-size: 60px;
-}
+} */
 
-nav {
+/* nav {
   display: flex;
   justify-content: center;
-}
+} */
 
-a {
+/* a {
   color: black;
   justify-content: center;
   padding-bottom: 0px;
@@ -74,9 +74,9 @@ a {
 
 a:hover {
   color: white;
-}
+} */
 
-.main-image {
+/* .main-image {
 
 height: 1000px;
 width: 1000px;
@@ -85,7 +85,7 @@ padding: 10px 10px;
 
 img {
   border: black 2px solid;
-  border-radius: 25px
+  border-radius: 25px */
 
 }
 nav ul {
@@ -96,7 +96,7 @@ nav ul {
 
 /*  ---- Tell me more - Albums ----- */
 
-.inventory {
+/* .inventory {
   display: flex;
   padding: 10px 0px 0px 60px;
 }
@@ -110,9 +110,9 @@ nav ul {
 .album-image {
   display: flex;
   align-items: center;
-}
+} */
 
-.stock_info {
+/* .stock_info {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
   border: black 5px solid;
@@ -133,24 +133,24 @@ nav ul {
   text-align: center;
   justify-content: space-around;
   background-color: white;
-}
+} */
 
-.profit_table {
+/* .profit_table {
   justify-content: center;
   width: 700px;
   font-size: 80px;
   border: black 5px solid;
   border-radius: 25px;
   background-color: white;
-}
+} */
 
-.content-box {
+/* .content-box {
   display: flex;
   border: 5px;
   justify-content: center;
-}
+} */
 
-li {
+/* li {
   list-style-type: none;
 }
 
@@ -158,18 +158,18 @@ nav ul li {
   list-style-type: none;
   margin: 20px 20px;
   font-size: 55px;
-}
+} */
 
-.small_link {
+/* .small_link {
   font-size: 35px;
   margin: 10px;
-}
-
+} */
+/*
 ul li {
   font-size: 55px;
-}
+} */
 
-.nav-button {
+/* .nav-button {
   border: 2px solid black;
   width: 900px;
   font-size: 55px;
@@ -182,7 +182,7 @@ ul li {
   justify-content: center;
   display: inline-block;
   text-align: center;
-}
+} */
 .button {
   border: 2px solid black;
   width: 900px;
@@ -198,13 +198,13 @@ ul li {
   text-align: center;
 }
 
-.button:hover{
+/* .button:hover{
   background-color: lightgrey;
 }
 
 .button:active {
   background-color: #3e8e41;
-  transform: translateY(4px);
+  transform: translateY(4px); */
 }
 
 .smll-txt {
