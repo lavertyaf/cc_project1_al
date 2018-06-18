@@ -1,8 +1,8 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/artist')
 require_relative('../models/album')
-require('pry-byebug')
+# require('pry-byebug')
 
 get '/artists' do
   @artists = Artist.all
