@@ -5,24 +5,24 @@
 <div class="inventory">
   <div class="album-image">
     <a href="/albums/<%= album.id %>"> <img src="/images/<%=album.id%>.jpg" alt="album cover" >
+    </div>
+    <div class="album-info">
+      <ul>
+        <li><%= album.artist_name%></li>
+        <li><%= album.title %></li>
+        <li><%= album.stock_level%> in stock</li></a>
+      </ul>
+    </div>
+    <br>
   </div>
-  <div class="album-info">
-    <ul>
-      <li><%= album.artist_name%></li>
-      <li><%= album.title %></li>
-      <li><%= album.stock_level%> in stock</li></a>
-    </ul>
-  </div>
-  <br>
-</div>
-<% end %>
+  <% end %>
 
-<div class="stock-info">
-  <div class="info">
+  <div class="stock-info">
+    <div class="info">
       You have <%= @total_stock %> albums here
-  </div>
+    </div>
 
-  <div class="info">
-    Your stock value is £<%= @total_value %>
+    <div class="info">
+      Your stock value is £<%= @total_value %>
+    </div>
   </div>
-</div>
