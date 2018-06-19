@@ -6,6 +6,7 @@ artist2 = Artist.new({"name" => "Nirvana"})
 artist3 = Artist.new({"name" => "Pink Floyd"})
 artist4 = Artist.new({"name" => "Biffy Clyro"})
 artist5 = Artist.new({"name" => "The Beatles"})
+artist6 = Artist.new({"name" => "The Batfinx"})
 
 
 artist1.save()
@@ -13,6 +14,7 @@ artist2.save()
 artist3.save()
 artist4.save()
 artist5.save()
+artist6.save()
 
 
 album1 = Album.new({ "title" => "The Colour & the Shape", "genre" => "Rock", "stock_level" => 10, "buy_price" => 10, "sell_price" => 17, "release" => 1997, "artist_id" => artist1.id})
@@ -41,6 +43,8 @@ album12 = Album.new({ "title" => "Help!", "genre" => "Pop", "stock_level" => 5, 
 
 album13 = Album.new({ "title" => "Abbey Road", "genre" => "Pop", "stock_level" => 20, "buy_price" => 15, "sell_price" => 21, "release" => 1969, "artist_id" => artist5.id})
 
+album14 = Album.new({ "title" => "Roll n Rock Frog", "genre" => "Rock & Roll", "stock_level" => 1, "buy_price" => 100, "sell_price" => 150, "release" => 1989, "artist_id" => artist6.id})
+
 
 
 album1.save()
@@ -56,3 +60,4 @@ album10.save()
 album11.save()
 album12.save()
 album13.save()
+album14.save()
